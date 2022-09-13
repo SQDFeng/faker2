@@ -8,7 +8,7 @@
 30 12,21 * * * jd_bean_change_pro
 23 1,18 * * * jd_bean_home
 20 22 * * * jd_bean_info
-0 0 * * *  jd_bean_sign
+0 0 * * * jd_bean_sign
 1 8 13 5 * jd_beans_7days
 0 0 * * * jd_beautyStudy
 20 12 * * * jd_beauty_ex
@@ -17,7 +17,7 @@
 2 0-23/4 * * * jd_cash_nolan
 16 0,5 * * * jd_cash_wx
 45 0-23/2 * * * jd_cfd
-50 * * * * jd_cfd.hb
+50 * * * * jd_cfd_hb
 5 * * * * jd_cfd_mooncake
 8 6,20 * * * jd_club_lottery
 10 10 * * * jd_dd_follow_cc
@@ -45,13 +45,13 @@
 10 0 * * * jd_jdzz
 15 10 * * * jd_jfcz
 6 10 * * * jd_jingBeanReceive
-3 0 0 * * 5 jd_joy_joy_reward
+3 0 0 * * jd_joy_joy_reward
 32 * * * * jd_joy_joy_run
 20 0-23/3 * * * jd_joy_park_Mod
-30 0 * * * * jd_joy_park_run
+30 0 * * * jd_joy_park_run
 0 1,7,20 * * * jd_joy_park_task
 0 0,7,9,17,20 * * * jd_joy_park_task_Mod
-2 0 0 * * 5 jd_joy_run_reward
+2 0 0 * * jd_joy_run_reward
 5 2,18 * * * jd_joyjd_open
 11 1,15 * * * jd_joymanor_task
 2 1 * * * jd_joyopen
@@ -84,7 +84,7 @@
 20 0,22 * * * jd_speed_redpocke
 0 7-11 * * * jd_speed_sign
 18 8,20 * * * jd_speed_signfree
-0 35 22,23 22 8 * superBrandStar
+35 18,23 24 9 * jd_superBrandStar
 1 15,20 * * * jd_supermh
 5 20 1-9 9 * jd_supermohe
 55 22 * * * jd_unsubscriLive
@@ -102,6 +102,6 @@
 20 1,8 * * * jx_sign
 30 2,9 * * * jx_sign_xd
 22 */7 * * * m_jd_active_scan
-20 5,12,21 * * m_jd_farm_automation
+20 5,12,21 * * * m_jd_farm_automation
 40 5,12,21 * * * m_jd_pet_automation
 1 0,8-18/3 * * * m_jx_factory_commodity

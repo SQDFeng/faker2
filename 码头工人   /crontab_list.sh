@@ -1,6 +1,6 @@
 ##############活动##############
 
-30 * * * * jd_CheckCK
+30 * * * * node /scripts/jd_CheckCK.js >> /scripts/logs/jd_CheckCK.log 2>&1
 0 0 * * * jd_CheckCkSeq
 14 0,9 * * * jd_DailyBonus_Mod
 30 10 * * * jd_UpdateUIDtoRemark

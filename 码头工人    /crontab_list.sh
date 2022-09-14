@@ -1,5 +1,6 @@
 ##############活动##############
 
+20 0-23/2 * * * node /scripts/jd_EsportsManager.js >> /scripts/logs/jd_EsportsManager.log 2>&1
 30 * * * * node /scripts/jd_CheckCK.js >> /scripts/logs/jd_CheckCK.log 2>&1
 0 0 * * * jd_CheckCkSeq
 14 0,9 * * * jd_DailyBonus_Mod

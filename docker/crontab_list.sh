@@ -50,7 +50,7 @@
 10 0 * * * node /scripts/jd_jdzz.js >> /scripts/logs/jd_jdzz.log 2>&1
 15 10 * * * node /scripts/jd_jfcz.js >> /scripts/logs/jd_jfcz.log 2>&1
 6 10 * * * node /scripts/jd_jingBeanReceive.js >> /scripts/logs/jd_jingBeanReceive.log 2>&1
-3 0 0 * * node /scripts/jd_joy_joy_reward.js >> /scripts/logs/jd_joy_joy_reward.log 2>&1
+0 0 * * 5 node /scripts/jd_joy_joy_reward.js >> /scripts/logs/jd_joy_joy_reward.log 2>&1
 32 * * * * node /scripts/jd_joy_joy_run.js >> /scripts/logs/jd_joy_joy_run.log 2>&1
 20 0-23/3 * * * node /scripts/jd_joy_park_Mod.js >> /scripts/logs/jd_joy_park_Mod.log 2>&1
 30 0 * * * node /scripts/jd_joy_park_run.js >> /scripts/logs/jd_joy_park_run.log 2>&1

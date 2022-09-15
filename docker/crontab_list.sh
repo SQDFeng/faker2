@@ -56,7 +56,7 @@
 30 0 * * * node /scripts/jd_joy_park_run.js >> /scripts/logs/jd_joy_park_run.log 2>&1
 0 1,7,20 * * * node /scripts/jd_joy_park_task.js >> /scripts/logs/jd_joy_park_task.log 2>&1
 0 0,7,9,17,20 * * * node /scripts/jd_joy_park_task_Mod.js >> /scripts/logs/jd_joy_park_task_Mod.log 2>&1
-2 0 0 * * node /scripts/jd_joy_run_reward.js >> /scripts/logs/jd_joy_run_reward.log 2>&1
+0 0 * * 5 node /scripts/jd_joy_run_reward.js >> /scripts/logs/jd_joy_run_reward.log 2>&1
 5 2,18 * * * node /scripts/jd_joyjd_open.js >> /scripts/logs/jd_joyjd_open.log 2>&1
 11 1,15 * * * node /scripts/jd_joymanor_task.js >> /scripts/logs/jd_joymanor_task.log 2>&1
 2 1 * * * node /scripts/jd_joyopen.js >> /scripts/logs/jd_joyopen.log 2>&1

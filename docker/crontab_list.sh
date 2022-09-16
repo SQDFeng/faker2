@@ -56,9 +56,9 @@
 0 1,7,20 * * * node /scripts/jd_joy_park_task.js >> /scripts/logs/jd_joy_park_task.log 2>&1
 0 0,7,9,17,20 * * * node /scripts/jd_joy_park_task_Mod.js >> /scripts/logs/jd_joy_park_task_Mod.log 2>&1
 0 0 * * 5 node /scripts/jd_joy_run_reward.js >> /scripts/logs/jd_joy_run_reward.log 2>&1
-5 2,18 * * * node /scripts/jd_joyjd_open.js >> /scripts/logs/jd_joyjd_open.log 2>&1
+#5 2,18 * * * node /scripts/jd_joyjd_open.js >> /scripts/logs/jd_joyjd_open.log 2>&1
 11 1,15 * * * node /scripts/jd_joymanor_task.js >> /scripts/logs/jd_joymanor_task.log 2>&1
-2 1 * * * node /scripts/jd_joyopen.js >> /scripts/logs/jd_joyopen.log 2>&1
+#2 1 * * * node /scripts/jd_joyopen.js >> /scripts/logs/jd_joyopen.log 2>&1
 20 * * * * node /scripts/jd_joypark_run.js >> /scripts/logs/jd_joypark_run.log 2>&1
 10 17 6 12 * node /scripts/jd_draw.js >> /scripts/logs/jd_draw.log 2>&1
 11 0,20 * * * node /scripts/jd_js_cash.js >> /scripts/logs/jd_js_cash.log 2>&1
@@ -105,7 +105,7 @@
 23 9,14 * * * node /scripts/jx_one2shopping.js >> /scripts/logs/jx_one2shopping.log 2>&1
 20 1,8 * * * node /scripts/jx_sign.js >> /scripts/logs/jx_sign.log 2>&1
 30 2,9 * * * node /scripts/jx_sign_xd.js >> /scripts/logs/jx_sign_xd.log 2>&1
-22 */7 * * * node /scripts/m_jd_active_scan.js >> /scripts/logs/m_jd_active_scan.log 2>&1
+#22 */7 * * * node /scripts/m_jd_active_scan.js >> /scripts/logs/m_jd_active_scan.log 2>&1
 20 5,12,21 * * * node /scripts/m_jd_farm_automation.js >> /scripts/logs/m_jd_farm_automation.log 2>&1
 40 5,12,21 * * * node /scripts/m_jd_pet_automation.js >> /scripts/logs/m_jd_pet_automation.log 2>&1
 1 0,8-18/3 * * * node /scripts/m_jx_factory_commodity.js >> /scripts/logs/m_jx_factory_commodity.log 2>&1

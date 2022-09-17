@@ -5,10 +5,6 @@
 
 ##############活动##############
 
-30 * * * * node /scripts/jd_CheckCK.js >> /scripts/logs/jd_CheckCK.log 2>&1
-0 0 * * * node /scripts/jd_CheckCkSeq.js >> /scripts/logs/jd_CheckCKSeq.log 2>&1
-14 0,9 * * * node /scripts/jd_DailyBonus_Mod.js >> /scripts/logs/jd_DailyBonus_Mod.log 2>&1
-30 10 * * * node /scripts/jd_UpdateUIDtoRemark.js >> /scripts/logs/jd_UpdateUIDtoRemark.log 2>&1
 2 9,12,21 * * * node /scripts/jd_bean_change_pro.js >> /scripts/logs/jd_bean_change_pro.log 2>&1
 23 1,18 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 20 22 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_bean_info.log 2>&1

@@ -111,3 +111,4 @@
 #0 0 1 1 * node /scripts/jd_active_scan.js >> /scripts/logs/jd_active_scan.log 2>&1
 #0 0 1 1 * node /scripts/jd_farm_automation.js >> /scripts/logs/.js >> /scripts/logs/jd_farm_automation.log 2>&1
 #0 0 1 1 * node /scripts/jd_open.js >> /scripts/logs/jd_open.log 2>&1
+#0 0 1 1 * node /scripts/jr_draw.js >> /scripts/logs/jr_draw.log 2>&1

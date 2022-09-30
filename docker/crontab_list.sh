@@ -75,7 +75,7 @@
 15 6-18/6 * * * node /scripts/jd_petrw.js >> /scripts/logs/jd_petrw.log 2>&1
 12 0-23/6 * * * node /scripts/jd_pigPet.js >> /scripts/logs/jd_pigPet.log 2>&1
 15 7-21/2 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
-39 20 * * * node /scripts/jd_price.js >> /scripts/logs/jd_price.log 2>&1
+39 20 1,15 * * node /scripts/jd_price.js >> /scripts/logs/jd_price.log 2>&1
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 10 10 * * * node /scripts/jd_shangou.js >> /scripts/logs/jd_shangou.log 2>&1
 10 0 * * * node /scripts/jd_shop.js >> /scripts/logs/jd_shop.log 2>&1

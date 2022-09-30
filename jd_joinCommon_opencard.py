@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-File: jd_joinCommon_opencard.py(通用开卡-customized系列)
+File: jd_joinCommon_opencard.py(通用开卡-joinCommon系列)
 Author: HarbourJ
 Date: 2022/8/12 20:37
 TG: https://t.me/HarbourToulu
@@ -15,29 +15,28 @@ Description: dingzhi/joinCommon系列通用开卡脚本(通常情况下,开一�
             变量: export jd_joinCommonId="2b870a1a7450xxxxxxxxxxxxx&1000000904" 变量值需要传入活动id&shopId
 """
 
-import time
-import requests
-import sys
-import re
-import os
+import time, requests, sys, re, os, json, random
 from datetime import datetime
-import json
-import random
 from urllib.parse import quote_plus, unquote_plus
 from functools import partial
 print = partial(print, flush=True)
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-
-from jd_sign import *
+try:
+    from jd_sign import *
+except ImportError as e:
+    print(e)
+    if "No module" in str(e):
+        print("请先运行Faker库依赖一键安装脚本(jd_check_dependent.py)，安装jd_sign.so依赖")
 try:
     from jdCookie import get_cookies
     getCk = get_cookies()
 except:
-    print("请先下载依赖脚本，\n下载链接: https://raw.githubusercontent.com/shufflewzc/faker2/main/jdCookie.py")
+    print("请先下载依赖脚本，\n下载链接: https://raw.githubusercontent.com/HarbourJ/HarbourToulu/main/jdCookie.py")
     sys.exit(3)
 
 redis_url = os.environ.get("redis_url") if os.environ.get("redis_url") else "172.17.0.1"
+redis_port = os.environ.get("redis_port") if os.environ.get("redis_port") else "6379"
 redis_pwd = os.environ.get("redis_pwd") if os.environ.get("redis_pwd") else ""
 jd_joinCommonId = os.environ.get("jd_joinCommonId") if os.environ.get("jd_joinCommonId") else ""
 inviterUuid = os.environ.get("jd_joinCommon_uuid") if os.environ.get("jd_joinCommon_uuid") else ""
@@ -63,7 +62,7 @@ def redis_conn():
     try:
         import redis
         try:
-            pool = redis.ConnectionPool(host=redis_url, port=6379, decode_responses=True, socket_connect_timeout=5, password=redis_pwd)
+            pool = redis.ConnectionPool(host=redis_url, port=redis_port, decode_responses=True, socket_connect_timeout=5, password=redis_pwd)
             r = redis.Redis(connection_pool=pool)
             r.get('conn_test')
             print('✅redis连接成功')
@@ -81,17 +80,16 @@ def getToken(ck, r=None):
         pt_pin = unquote_plus(re.compile(r'pt_pin=(.*?);').findall(ck)[0])
     except:
         # redis缓存Token 活动域名+ck前7位(获取pin失败)
-        pt_pin = ck[:8]
+        pt_pin = ck[:15]
     try:
         if r is not None:
             Token = r.get(f'{activityUrl.split("https://")[1].split("-")[0]}_{pt_pin}')
             # print("Token过期时间", r.ttl(f'{activityUrl.split("https://")[1].split("-")[0]}_{pt_pin}'))
             if Token is not None:
-                # print(f"♻️获取缓存Token->: {Token}")
                 print(f"♻️获取缓存Token")
                 return Token
             else:
-                print("🈳去设置Token缓存")
+                # print("🈳去设置Token缓存")
                 s.headers = {
                     'Connection': 'keep-alive',
                     'Accept-Encoding': 'gzip, deflate, br',
@@ -115,9 +113,9 @@ def getToken(ck, r=None):
                 Token_new = f.json()['token']
                 # print(f"Token->: {Token_new}")
                 if r.set(f'{activityUrl.split("https://")[1].split("-")[0]}_{pt_pin}', Token_new, ex=1800):
-                    print("✅Token缓存设置成功")
+                    print("✅Token缓存成功")
                 else:
-                    print("❌Token缓存设置失败")
+                    print("❌Token缓存失败")
                 return Token_new
         else:
             s.headers = {
@@ -141,7 +139,7 @@ def getToken(ck, r=None):
                 if "参数异常" in f.text:
                     return
             Token = f.json()['token']
-            print(f"Token->: {Token}")
+            print(f"✅获取实时Token")
             return Token
     except:
         return
@@ -328,7 +326,7 @@ def activityContent(pin, pinImg, nickname):
         yunMidImageUrl = quote_plus(pinImg)
     except:
         yunMidImageUrl = quote_plus("https://img10.360buyimg.com/imgzone/jfs/t1/21383/2/6633/3879/5c5138d8E0967ccf2/91da57c5e2166005.jpg")
-    payload = f"activityId={activityId}&pin={quote_plus(pin)}&pinImg={quote_plus(yunMidImageUrl)}&nick={quote_plus(nickname)}&cjyxPin=&cjhyPin=&shareUuid={shareUuid}"
+    payload = f"activityId={activityId}&pin={quote_plus(pin)}&pinImg={yunMidImageUrl}&nick={quote_plus(nickname)}&cjyxPin=&cjhyPin=&shareUuid={shareUuid}"
     headers = {
         'Host': 'lzdz1-isv.isvjcloud.com',
         'Accept': 'application/json',

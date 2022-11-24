@@ -9,7 +9,6 @@
 23 1,18 * * * node /scripts/jd_bean_home.js >> /scripts/logs/jd_bean_home.log 2>&1
 20 22 * * * node /scripts/jd_bean_info.js >> /scripts/logs/jd_bean_info.log 2>&1
 0 0 * * * node /scripts/jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
-1 8 13 5 * node /scripts/jd_beans_7days.js >> /scripts/logs/jd_beans_7days.log 2>&1
 20 12 * * * node /scripts/jd_beauty_ex.js >> /scripts/logs//jd_beauty_ex.log 2>&1
 10 9,11,15,21 * * * node /scripts/jd_beauty_plant.py >> /scripts/logs/jd_beauty_plant.log 2>&1
 40 8,10,12,14 * * * node /scripts/jd_big_winner_Mod.js >> /scripts/logs/jd_big_winner_Mod.log 2>&1
@@ -19,6 +18,7 @@
 50 * * * * node /scripts/jd_cfd_hb.js >> /scripts/logs/jd_cfd_hb.log 2>&1
 5 * * * * node /scripts/jd_cfd_mooncake.js >> /scripts/logs/jd_cfd_mooncake.log 2>&1
 8 6,20 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
+15 8,12,21 * * * node /scripts/jd_couponspace.js >> /scripts/logs/jd_couponspace.log 2>&1
 10 10 * * * node /scripts/jd_dd_follow_cc.js >> /scripts/logs/jd_dd_follow_cc.log 2>&1
 30 7 * * * node /scripts/jd_ddly.js >> /scripts/logs/jd_ddly.log 2>&1
 0 0 * 6 * node /scripts/jd_delCoupon.js >> /scripts/logs/jd_delCoupon.log 2>&1
@@ -64,6 +64,7 @@
 0 0,10 * * * node /scripts/jd_lottery.js >> /scripts/logs/jd_lottery.log 2>&1
 3 1,11 * * * node /scripts/jd_m_sign.js >> /scripts/logs/jd_m_sign.log 2>&1
 10 0,20 * * * node /scripts/jd_malls.js >> /scripts/logs/jd_malls.log 2>&1
+39 12,21 * * *  node /scripts/jd_marketmh.js >> /scripts/logs/jd_marketmh.log 2>&1
 15 6,7 * * * node /scripts/jd_morningSc.js >> /scripts/logs/jd_morningSc.log 2>&1
 0 7-11 * * * node /scripts/jd_moxigame.js >> /scripts/logs/jd_moxigame.log 2>&1
 10 5,7,9 * * * node /scripts/jd_mpdz.js >> /scripts/logs/jd_mpdz.log 2>&1
@@ -71,11 +72,13 @@
 16 16,17,18 * * * node /scripts/jd_mpdz_car_task.js >> /scripts/logs/jd_mpdz_car_task.log 2>&1
 16 18 7 7 7 node /scripts/jd_mpdz_help.js >> /scripts/logs/jd_mpdz_help.log 2>&1
 0 0,6,12 * * * node /scripts/jd_mpdz_task.js >> /scripts/logs/jd_mpdz_task.log 2>&1
+30 8 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 15 6-18/6 * * * node /scripts/jd_pet.js >> /scripts/logs/jd_pet.log 2>&1
 40 5,12,21 * * * node /scripts/jd_pet_automation.js >> /scripts/logs/jd_pet_automation.log 2>&1
 15 6-18/6 * * * node /scripts/jd_petrw.js >> /scripts/logs/jd_petrw.log 2>&1
 12 0-23/6 * * * node /scripts/jd_pigPet.js >> /scripts/logs/jd_pigPet.log 2>&1
 15 7-21/2 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
+9 8 * * * node /scripts/jd_plus2bean.js >> /scripts/logs/jd_plus2bean.log 2>&1
 39 20 1,15 * * node /scripts/jd_price.js >> /scripts/logs/jd_price.log 2>&1
 20 8 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1
 10 10 * * * node /scripts/jd_shangou.js >> /scripts/logs/jd_shangou.log 2>&1
@@ -91,6 +94,7 @@
 0 1 * * * node /scripts/jd_tyt.js >> /scripts/logs/jd_tyt.log 2>&1
 0 0 * * * node /scripts/jd_tyt_ks.js >> /scripts/logs/jd_tyt_ks.log 2>&1
 55 22 * * * node /scripts/jd_unsubscriLive.js >> /scripts/logs/jd_unsubscriLive.log 2>&1
+9 9 * * 5 node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
 33 5 * * * node /scripts/jd_washbeans.js >> /scripts/logs/jd_washbeans.log 2>&1
 40 0,11,19 * * * node /scripts/jd_wish.js >> /scripts/logs/jd_wish.log 2>&1
 5 0-23/6 * * * node /scripts/jd_wsdlb.js >> /scripts/logs/jd_wsdlb.log 2>&1

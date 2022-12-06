@@ -3,16 +3,16 @@
 开卡延迟,默认 4000
 opencard_delayTime
 */
-const $ = new Env("福利沸腾，足够精彩");
+const $ = new Env("决战12.12 足够精彩");
 const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 const notify = $.isNode() ? require("./sendNotify") : "";
 let cookiesArr = [], cookie = "", message = "";
 let delayTime = process.env.opencard_delayTime ?? 4000;
 let ownCode = null;
 let authorCodeList = [
-  'a8f1aa221f4d43488180d152fc4584ac',
+  '4039c7808e294231b5990baef0b1fbaf',
 ];
-let activityId = 'c123c2c8e9654cd4b876f4482ff773a4'
+let activityId = '304094185c214b8d9da13fc11c322166'
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item]);

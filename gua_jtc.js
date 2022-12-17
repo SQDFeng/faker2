@@ -1,8 +1,4 @@
-/*
-cron "35 11 * * *" jd_insight.js, tag:京洞察问卷通知
 
-by 青蛙
- */
 
 const $ = new Env('京东调研问卷 京洞察')
 const notify = $.isNode() ? require('./sendNotify') : ''

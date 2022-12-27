@@ -98,6 +98,8 @@
 33 5 * * * node /scripts/jd_washbeans.js >> /scripts/logs/jd_washbeans.log 2>&1
 40 0,11,19 * * * node /scripts/jd_wish.js >> /scripts/logs/jd_wish.log 2>&1
 5 0-23/6 * * * node /scripts/jd_wsdlb.js >> /scripts/logs/jd_wsdlb.log 2>&1
+12 4 * * * node /scripts/jd_wxSignRed.js >> /scripts/logs/jd_wxSignRed.log 2>&1
+30 7 * * * node /scripts/jd_wxttzq.js >> /scripts/logs/jd_wxttz.log 2>&1
 0 8 * * * node /scripts/jd_wyw.js >> /scripts/logs/jd_wyw.log 2>&1
 3 0,7 * * * node /scripts/jd_xgyl_wx.js >> /scripts/logs/jd_xgyl_wx.log 2>&1
 30 6-20/3 * * * node /scripts/jd_xinruimz.js >> /scripts/logs/jd_xinruimz.log 2>&1
